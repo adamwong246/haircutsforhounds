@@ -18,7 +18,7 @@
     "funkophile:dev": "nodemon --exec \"tsx funkophile.config.ts watch\"",
     "serve": "node ./server.cjs",
     "dev": "yarn serve & yarn funkophile:dev",
-    "deploy": "git push origin `git subtree split --prefix dist dev`:master --force",
+    "deploy": "git push origin `git subtree split --prefix dist dev`:refs/heads/master --force",
 		"shipIt!": "yarn funkophile:build && git add --all && git push origin dev && git commit && yarn deploy"
   },
   "dependencies": {
