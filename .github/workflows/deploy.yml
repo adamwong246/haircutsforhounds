@@ -29,6 +29,12 @@ jobs:
       - name: Build site
         run: yarn funkophile:build
 
+      - name: List dist contents
+        run: ls -laR ./dist
+
+      - name: Check for index.html
+        run: test -f ./dist/index.html && echo "index.html exists" || echo "index.html NOT FOUND"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
