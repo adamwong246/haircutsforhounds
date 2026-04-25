@@ -1,0 +1,172 @@
+/* Stained Glass Saint Theme Variables */
+:root {
+  /* Primary - Cathedral Blues */
+  --color-primary-dark: #1a237e;
+  --color-primary: #283593;
+  --color-primary-light: #3949ab;
+
+  /* Accent - Gold Leaf */
+  --color-gold-dark: #b8860b;
+  --color-gold: #d4a017;
+  --color-gold-light: #f0c040;
+
+  /* Accent - Ruby (Baseball Cap) */
+  --color-ruby-dark: #6b0000;
+  --color-ruby: #8b0000;
+  --color-ruby-light: #b71c1c;
+
+  /* Secondary - Amethyst (Saintly) */
+  --color-amethyst-dark: #4a0080;
+  --color-amethyst: #6a0dad;
+  --color-amethyst-light: #9b59b6;
+
+  /* Secondary - Emerald (Hope/Growth) */
+  --color-emerald-dark: #1b5e20;
+  --color-emerald: #2e7d32;
+  --color-emerald-light: #43a047;
+
+  /* Warm - Dog Fur */
+  --color-warm-dark: #5d3a1a;
+  --color-warm: #8B4513;
+  --color-warm-light: #a0522d;
+
+  /* Metallic - Scissors */
+  --color-silver-dark: #808080;
+  --color-silver: #c0c0c0;
+  --color-silver-light: #e0e0e0;
+
+  /* Backgrounds */
+  --color-bg-light: #f5f5f0;
+  --color-bg-dark: #1a1a2e;
+  --color-bg-card: #ffffff;
+  --color-bg-card-dark: #2c2c3e;
+
+  /* Text */
+  --color-text-light: #f5f5f0;
+  --color-text-dark: #2c2c2c;
+  --color-text-muted: #666666;
+
+  /* Semantic */
+  --color-link: var(--color-gold);
+  --color-link-visited: var(--color-amethyst);
+  --color-link-hover: var(--color-ruby);
+  --color-success: var(--color-emerald);
+  --color-warning: var(--color-ruby);
+  --color-info: var(--color-primary);
+
+  /* Code */
+  --color-code-bg: #0f2c00;
+  --color-code-text: #00bc00;
+  --color-code-border: #00bc00;
+
+  /* Borders */
+  --color-border: var(--color-silver);
+  --color-border-light: #e0e0e0;
+}
+
+pre {
+	background-color: var(--color-code-bg);
+	color: var(--color-code-text);
+	padding: 0.5rem;
+	border: var(--color-code-border) 1px solid;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+body nav {
+	background-color: var(--color-primary-dark);
+	color: var(--color-text-light);
+}
+
+body footer {
+	background-color: var(--color-primary-dark);
+	color: var(--color-text-light);
+}
+
+/* Default colors (light mode) */
+body {
+	color: var(--color-text-dark);
+	background-color: var(--color-bg-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--color-primary-dark);
+}
+
+strong {
+	color: var(--color-ruby);
+}
+
+a:link {
+	color: var(--color-link);
+}
+
+a:visited {
+	color: var(--color-link-visited);
+}
+
+a:hover {
+	color: var(--color-link-hover);
+}
+
+/* Site title in nav - make it stand out */
+#site-title a {
+  color: var(--color-gold-light);
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 0 8px rgba(212, 160, 23, 0.3);
+}
+
+#site-title a:hover {
+  color: var(--color-gold);
+  text-shadow: 0 0 12px rgba(212, 160, 23, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+	pre,
+	code {
+		color: var(--color-code-text);
+		background-color: var(--color-code-bg);
+	}
+	
+	* {
+		color: var(--color-text-light);
+	}
+
+	h1, h2, h3, h4, h5, h6, strong {
+		color: var(--color-gold);
+	}
+
+	body nav {
+		background-color: #0d0d2b;
+	}
+
+	body footer {
+		background-color: #0d0d2b;
+	}
+
+	body {
+		color: var(--color-text-light);
+		background-color: var(--color-bg-dark);
+	}
+
+	a:link {
+		color: var(--color-gold);
+	}
+
+	a:visited {
+		color: var(--color-amethyst-light);
+	}
+	
+	a:hover {
+		color: var(--color-ruby-light);
+	}
+	
+	hr {
+		border-color: var(--color-amethyst);
+	}
+	
+	article {
+		background-color: var(--color-bg-card-dark);
+		border: 1px solid var(--color-amethyst);
+	}
+}

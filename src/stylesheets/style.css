@@ -1,0 +1,154 @@
+@media (-webkit-min-device-pixel-ratio: 1.5),
+	(min-resolution: 144dpi),
+	(min-resolution: 1.5dppx) {
+	html {
+		font-weight: 300;
+	}
+}
+
+nav {
+	padding: 1em;
+	z-index: 1;
+}
+
+nav ul {
+	/* margin-left: 1em; */
+	/* text-align: center; */
+	list-style-type: none;
+}
+
+@media (max-width: 700px) {
+	body {
+		/* font-size: 16px; */
+		/* line-height: 1.6; */
+		/* padding: 0;
+    margin: 0; */
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+			Ubuntu, Cantarell, sans-serif;
+	}
+
+	h1 {
+		font-size: 1.8rem;
+		line-height: 1.2;
+		margin-top: 1.5rem;
+		/* margin-bottom: 1rem; */
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		margin-top: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.4;
+	}
+
+	p,
+	li {
+		line-height: 1.6;
+		/* margin-bottom: 1rem; */
+	}
+
+	article {
+		margin-bottom: 2rem;
+		padding: 1rem;
+		/* background: white;
+    border-radius: 8px; */
+		/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+	}
+
+	.back-and-forward-links {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.back-link,
+	.forward-link {
+		margin: 0.5rem 0;
+		text-align: center;
+	}
+
+	.right {
+		display: block;
+		text-align: right;
+		margin-top: 1rem;
+	}
+
+	/* Fix colors for mobile layout */
+	@media (prefers-color-scheme: dark) {
+		/* body {
+      color: #ddd;
+      background-color: #333;
+    } */
+
+		/* article {
+      background: #444;
+      color: #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    } */
+
+		/* h1, h2, h3, h4, h5, h6, strong {
+      color: white;
+    }
+    
+    nav {
+      background-color: #101010;
+      color: white;
+    }
+    
+    footer {
+      background-color: #101010;
+      color: white;
+    }
+    
+    a:link {
+      color: rgb(159, 112, 201);
+    }
+    
+    a:visited {
+      color: rgb(118, 118, 229);
+    } */
+	}
+}
+
+article {
+	margin-bottom: 1em;
+}
+
+/* Hero banner for index page */
+.hero-banner {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-amethyst) 100%);
+  color: var(--color-text-light);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero-banner h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: var(--color-gold);
+}
+
+.hero-banner p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: var(--color-text-light);
+}
+
+/* Blog table */
+.blog-table {
+  width: max-content;
+}
+
+/* Hidden utility class */
+.hidden {
+  display: none;
+}

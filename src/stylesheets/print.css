@@ -1,0 +1,15 @@
+@media print {
+	footer,
+	nav,
+	.no-print {
+		display: none !important;
+	}
+
+	p {
+		max-width: none !important;
+	}
+
+	ul {
+		margin-top: 0px;
+	}
+}

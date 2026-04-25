@@ -1,0 +1,25 @@
+extends layout.jade
+
+block pageTitle
+  title
+    = entry.meta.title
+
+block content
+  include blogEntryPartial
+  hr
+  
+  .back-and-forward-links
+    .back-link 
+      if(entry.meta.previous)
+        a(href=entry.meta.previous.url)
+          | ⬅️ 
+          = entry.meta.previous.title
+
+    .forward-link
+      if(entry.meta.next)
+        a(href=entry.meta.next.url)
+          = entry.meta.next.title
+          |  ➡️
+      
+    
+      

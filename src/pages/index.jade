@@ -1,0 +1,22 @@
+extends ../views/layout.jade
+
+block content
+  .hero-banner
+    img(src="/images/logo.png" alt="Logo")
+    h1 Welcome to Haircuts for Hounds
+    p We are a non-profit organization dedicated to helping animals through community hair styling.
+  
+  - for entry in blogEntries.slice(0, 20)
+    - var content = cheerio.load(entry.markdownContent)('p')
+    article
+      header
+        h2
+          a(href=entry.url)= entry.meta.title
+        h4
+          time= moment(entry.meta.publishedAt).format("MMMM Do YYYY")
+      hr
+      != content.first()
+      if (content.length > 1)
+        a.right(href=entry.url) Read more...
+
+  include blogLink

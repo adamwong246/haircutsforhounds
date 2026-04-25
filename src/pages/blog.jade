@@ -1,0 +1,18 @@
+extends ../views/layout.jade
+
+block content
+
+  table.blog-table
+    thead
+      tr
+        th id
+        th title
+        th publish date
+          
+    - for entry in blogEntries
+      tr
+        td= entry.entryId
+        td
+          a(href=entry.url)= entry.meta.title
+        td
+          time= moment(entry.meta.publishedAt).format("MMM Do YYYY")

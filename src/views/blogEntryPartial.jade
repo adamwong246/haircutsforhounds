@@ -1,0 +1,12 @@
+article
+  header
+    h1
+      a(href=entry.url)= entry.meta.title
+    h4
+      time= moment(entry.meta.publishedAt).format("MMMM Do YYYY")
+    if entry.meta.author
+      h4
+        = `author: ${entry.meta.author}`
+    hr
+  != entry.markdownContent
+  

@@ -1,0 +1,37 @@
+extends ../views/layout.jade
+
+block head
+  script(src="/fuse.js")
+
+block content
+  pre
+    |You step in the stream,
+    |But the water has moved on
+    |Error 404
+
+  pre#paths.hidden= JSON.stringify(paths)
+
+  h3 Your page could not be found. Here is a list of similar urls: 
+  ol#fuzzMatches
+
+  script. 
+    const search = function (list) {
+      const mappedList = list.map(function (path) {
+        return {path}
+      })
+      const options = {
+        shouldSort: true,
+        findAllMatches: true,
+        keys: [
+          "path"
+        ]
+      };
+      const fuse = new Fuse(list, options);
+
+      const pattern = window.location.pathname.split('/')[1]
+      document.getElementById('fuzzMatches').innerHTML = fuse.search(pattern).map(function (p) {
+        return `<li> <a href='/${p.item}'>${p.item}</a></li>`
+      }).join("")
+    }
+
+    search(JSON.parse(document.getElementById('paths').innerText))

@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'M PLUS Rounded 1c';
+	src: url('./fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('./fonts/Raleway-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	margin: -2rem;
+	font-family: 'Raleway', Tahoma, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'M PLUS Rounded 1c', Tahoma, sans-serif !important;
+}
+
+/* Basic typography for resume */
+p,
+li {
+	font-size: 11px;
+	line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 !important;
+}
+
+li {
+	margin: 0;
+	padding: 0 !important;
+}
+
+body ul {
+	margin-top: 0rem !important ;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-bottom: 0.3 !important;
+}
+
+p {
+	margin: 0;
+	margin: 0 0 0 !important;
+}
+
+
+.columns{
+	margin-left: 0.3rem;
+}
+
+.column ul{
+	margin-bottom: 0.3rem;
+}
