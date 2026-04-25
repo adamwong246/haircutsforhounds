@@ -1,0 +1,17 @@
+{
+  "name": "stVincents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "adam wong <adamwong246@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "funkophile:build": "tsx funkophile.config.ts build",
+    "funkophile:watch": "tsx funkophile.config.ts watch",
+    "funkophile:dev": "nodemon --exec \"tsx funkophile.config.ts watch\"",
+    "serve": "node ./server.cjs",
+    "dev": "yarn serve & yarn funkophile:dev"
+  },
+  "dependencies": {
+    "funkophile": "^1.1.0"
+  }
+}
